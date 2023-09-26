@@ -32,7 +32,7 @@ app.get("/", async (req, res) => {
 app.get("/book/:id" , async (req, res) => {
     try {
         const response = await axios.get(base_url + '/books/' + req.params.id);
-        res.render("books", { book: response.data });
+        res.render("book", { book: response.data });
     } catch (err) {
         console.error(err);
         res.status(500).send('Error');
