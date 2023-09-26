@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-const base_url = "http://10.104.9.209";
+//const base_url = "http://10.104.9.209";
+const base_url = "http://localhost3000";
 
 // Set the template engine
 app.set('view engine', 'ejs');
@@ -85,6 +86,10 @@ app.get("/delete/:id", async (req, res) => {
     }
 });
 
-app.listen(8080, () => {
-    console.log('Server started on port 8080');
+//app.listen(8080, () => {
+//    console.log('Server started on port 8080');
+//});
+
+app.listen(5500, () => {
+    console.log('Server started on port 5500');
 });
